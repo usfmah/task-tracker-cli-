@@ -7,6 +7,8 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@commander-js/extra-typings": "github:commander-js/extra-typings",
+    "commander": "^15.0.0",
     "express": "^5.2.1"
   },
   "name": "tasktrackercli",
@@ -27,5 +29,5 @@
     "url": "https://github.com/usfmah/task-tracker-cli-/issues"
   },
   "homepage": "https://github.com/usfmah/task-tracker-cli-#readme",
-  "type": "module" 
+  "type": "module"
 }
