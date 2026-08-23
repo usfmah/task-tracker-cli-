@@ -4,7 +4,7 @@
     "@types/node": "^26.2.0",
     "nodemon": "^3.1.14",
     "ts-node": "^10.9.2",
-    "typescript": "^7.0.2"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "express": "^5.2.1"
@@ -26,5 +26,6 @@
   "bugs": {
     "url": "https://github.com/usfmah/task-tracker-cli-/issues"
   },
-  "homepage": "https://github.com/usfmah/task-tracker-cli-#readme"
+  "homepage": "https://github.com/usfmah/task-tracker-cli-#readme",
+  "type": "module" 
 }
