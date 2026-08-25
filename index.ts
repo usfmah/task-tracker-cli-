@@ -1,10 +1,12 @@
-import {commandArgument, commandDescription} from './src/commandExetractor.ts';
-import {add, update, del, list} from './src/taskOperation.ts'
+import { parsedArgs } from './src/commandExetractor.ts';
+import { add } from './src/taskOperation.ts'
 
-if(commandArgument === 'add' && commandDescription) {
-    add(commandDescription)
-  } else if (commandArgument === 'add' && !commandDescription) {
-    console.log('Description is missed')
-  }
+const { command, description } = parsedArgs;
+
+if (command === 'add' && description) {
+  add(description);
+} else if (command === 'add') {
+  console.log('Description is missed');
+}
 
 
