@@ -27,6 +27,22 @@ function parseArgs(args: readonly string[]): ParsedArgs {
         };
     }
 
+    if (command === 'delete' || command === 'mark-done' || command === 'mark-in-progress') {
+        return {
+            command,
+            id: rest[0],
+            description: undefined,
+        };
+    }
+
+    if (command === 'list') {
+        return {
+            command,
+            id: rest[0],
+            description: undefined,
+        };
+    }
+
     const [id, ...descParts] = rest;
     return {
         command,
