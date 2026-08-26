@@ -7,12 +7,31 @@ interface ParsedArgs {
 }
 
 function parseArgs(args: readonly string[]): ParsedArgs {
-    const [command, id, ...rest] = args;
+    const [rawCommand, ...rest] = args;
+    const command = rawCommand?.toLowerCase();
 
+    if (command === 'add') {
+        return {
+            command,
+            id: undefined,
+            description: rest.join(' ') || undefined,
+        };
+    }
+
+    if (command === 'update') {
+        const [id, ...descParts] = rest;
+        return {
+            command,
+            id,
+            description: descParts.join(' ') || undefined,
+        };
+    }
+
+    const [id, ...descParts] = rest;
     return {
-        command: command?.toLowerCase(),
+        command,
         id,
-        description: rest.length > 0 ? rest.join(' ') : undefined,
+        description: descParts.join(' ') || undefined,
     };
 }
 
