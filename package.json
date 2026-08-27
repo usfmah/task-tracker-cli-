@@ -11,13 +11,16 @@
     "commander": "^15.0.0",
     "express": "^5.2.1"
   },
-  "name": "tasktrackercli",
+  "name": "task-tracker-cli",
   "version": "1.0.0",
   "description": "Task Tracker CLI",
   "main": "index.ts",
+  "bin": {
+    "task-cli": "./index.ts"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.ts"
+    "start": "node index.ts"
   },
   "repository": {
     "type": "git",

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { parsedArgs } from './src/commandExtractor.ts';
 import { add, update, del, list, markInProgress, markDone } from './src/taskOperation.ts';
 
