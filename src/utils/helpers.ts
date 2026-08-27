@@ -13,4 +13,12 @@ function nowISO(): string {
   return new Date().toISOString();
 }
 
-export { isErrnoException, nextId, nowISO };
+function findTaskIndex(tasks: readonly Task[], id: string): number {
+  return tasks.findIndex((t) => t.id === id);
+}
+
+function logNotFound(id: string): void {
+  console.log(`Task with ID ${id} not found`);
+}
+
+export { isErrnoException, nextId, nowISO, findTaskIndex, logNotFound };
