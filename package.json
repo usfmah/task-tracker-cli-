@@ -1,15 +1,8 @@
 {
   "devDependencies": {
-    "@types/express": "^5.0.6",
     "@types/node": "^26.2.0",
     "nodemon": "^3.1.14",
-    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "@commander-js/extra-typings": "github:commander-js/extra-typings",
-    "commander": "^15.0.0",
-    "express": "^5.2.1"
   },
   "name": "task-tracker-cli",
   "version": "1.0.0",
@@ -19,8 +12,10 @@
     "task-cli": "./index.ts"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.ts"
+    "start": "node index.ts",
+    "dev": "nodemon index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
