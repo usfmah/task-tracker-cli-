@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { parsedArgs } from './src/commandExtractor.ts';
 import { add, update, del, list, markInProgress, markDone } from './src/taskOperation.ts';
+import { printHelp } from './src/utils/help.ts';
 
 const { command, id, description } = parsedArgs;
 
@@ -49,14 +50,17 @@ switch (command) {
         await list(id);
         break;
     }
+    case 'help': {
+        printHelp();
+        break;
+    }
     case undefined: {
-        console.log('Usage: task-cli <command> [args]');
-        console.log('Commands: add, update, delete, mark-in-progress, mark-done, list [status]');
+        printHelp();
         break;
     }
     default: {
-        console.log(`Unknown command "${command}"`);
-        console.log('Commands: add, update, delete, mark-in-progress, mark-done, list [status]');
+        console.log(`Unknown command "${command}"\n`);
+        printHelp();
         break;
     }
 }
