@@ -1,4 +1,4 @@
-import { isErrnoException } from './utils/helprs.ts';
+import { isErrnoException } from './utils/helpers.ts';
 import * as fs from 'node:fs/promises';
 import type { Task } from './types.ts';
 

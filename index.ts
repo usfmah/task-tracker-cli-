@@ -1,4 +1,4 @@
-import { parsedArgs } from './src/commandExetractor.ts';
+import { parsedArgs } from './src/commandExtractor.ts';
 import { add } from './src/taskOperation.ts'
 
 const { command, description } = parsedArgs;
